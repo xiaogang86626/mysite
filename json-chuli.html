@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+   $(function(){
+	   $.ajax({
+		   url:"forjson.php",
+		   type:"GET",
+		   dataType:"json",
+		   success: function(data){
+			   $("#div1").html(data.name+data.age+data.sex);
+			   }
+		   });
+	   });
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>
